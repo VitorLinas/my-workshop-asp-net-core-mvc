@@ -1,10 +1,12 @@
-using SalesWebMvc.Models.ViewModels;
+using System;
 
-namespace SalesWebMvc.Models.ViewModels;
-
-public class ErrorViewModel
+namespace SalesWebMvc.Models.ViewModels
 {
-    public string? RequestId { get; set; }
+    public class ErrorViewModel
+    {
+        public string RequestId { get; set; }
+        public string Message { get; set; }
 
-    public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
+        public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
+    }
 }
